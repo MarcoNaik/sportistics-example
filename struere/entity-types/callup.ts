@@ -1,6 +1,6 @@
 import { defineData, type JSONSchema } from 'struere'
 
-const schema = {
+const schema: JSONSchema = {
   type: 'object',
   properties: {
     matchId: { type: 'string', references: 'club-match', description: 'Match this entry belongs to' },
@@ -13,7 +13,7 @@ const schema = {
     notes: { type: 'string', description: 'Free-text note about this player availability for this match' },
   },
   required: ['matchId', 'playerId', 'availability'],
-} as unknown as JSONSchema
+}
 
 export default defineData({
   name: 'Callup',

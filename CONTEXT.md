@@ -1,6 +1,6 @@
 # Sportistics
 
-A volleyball club tool — manages players, the schedule, match availability, training load, and per-player stats. Backend will eventually be Struere; today everything runs against in-memory mocks.
+A volleyball club tool — manages players, the schedule, match availability, training load, and per-player stats. UI in English; domain types in English. Backend will eventually be Struere; today everything runs against in-memory mocks.
 
 ## Language
 
@@ -24,7 +24,7 @@ _Avoid_: game, fixture, event (the last is reserved for VolleyballEvent).
 
 **MatchCallup**:
 Per-match availability roster. A player is in a Callup iff they have an entry in the `availability` map (default `pending` when added). One MatchCallup per ClubMatch.
-_Avoid_: lineup, roster (the Roster is the full Player list, not the Callup).
+_Avoid_: lineup, roster (Roster is the full Player list, not the Callup).
 
 **Availability**:
 A Player's status for a given Callup: `pending` | `available` | `maybe` | `unavailable`. Absence from the map = not in the Callup at all (distinct from `pending`).
