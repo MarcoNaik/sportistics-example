@@ -151,7 +151,6 @@ export const seedCallups: MatchCallup[] = [
       "p-7": "available",
       "p-8": "unavailable",
     },
-    notes: "Confirm libero before the match",
   },
   {
     matchId: "m-2",
@@ -173,6 +172,10 @@ export const seedCallups: MatchCallup[] = [
       "p-5": "available",
       "p-7": "available",
     },
+  },
+  {
+    matchId: "m-4",
+    availability: {},
   },
 ];
 

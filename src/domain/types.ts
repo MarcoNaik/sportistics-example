@@ -81,7 +81,6 @@ export type Availability = "pending" | "available" | "unavailable" | "maybe";
 export interface MatchCallup {
   matchId: string;
   availability: Record<string, Availability>;
-  notes?: string;
 }
 
 export interface TrainingLoad {

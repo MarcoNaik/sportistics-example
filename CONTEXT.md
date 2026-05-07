@@ -1,6 +1,6 @@
 # Sportistics
 
-A volleyball club tool — manages players, the schedule, match availability, training load, and per-player stats. All UI strings, agent prompts, and identifiers are English. Backend will eventually be Struere; today everything runs against in-memory mocks.
+A volleyball club tool — manages players, the schedule, match availability, training load, and per-player stats. Backend will eventually be Struere; today everything runs against in-memory mocks.
 
 ## Language
 
@@ -12,7 +12,7 @@ _Avoid_: athlete, member.
 
 **Youth**:
 Predicate over a Player, true iff their category is one of the youth categories. A Youth Player must have `guardianName` and `guardianPhone`; this is enforced by `Player.assertValid` at the construction seam.
-_Avoid_: minor, junior, sub18 (use the typed `CATEGORIES`).
+_Avoid_: minor, junior, u18 (use the typed `CATEGORIES`).
 
 ### Schedule
 
@@ -24,7 +24,7 @@ _Avoid_: game, fixture, event (the last is reserved for VolleyballEvent).
 
 **MatchCallup**:
 Per-match availability roster. A player is in a Callup iff they have an entry in the `availability` map (default `pending` when added). One MatchCallup per ClubMatch.
-_Avoid_: lineup, roster (Plantel/roster is the full Player list, not the Callup).
+_Avoid_: lineup, roster (the Roster is the full Player list, not the Callup).
 
 **Availability**:
 A Player's status for a given Callup: `pending` | `available` | `maybe` | `unavailable`. Absence from the map = not in the Callup at all (distinct from `pending`).

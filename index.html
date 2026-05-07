@@ -7,6 +7,14 @@
     <title>Sportistics</title>
   </head>
   <body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+          regs.forEach((r) => r.unregister());
+        });
+        caches?.keys?.().then((keys) => keys.forEach((k) => caches.delete(k)));
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

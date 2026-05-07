@@ -51,11 +51,11 @@ export default function Stats() {
 
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <p className="text-xs font-medium text-slate-500">Puntos totales</p>
+          <p className="text-xs font-medium text-slate-500">Total points</p>
           <p className="mt-1 text-2xl font-bold text-slate-900">{totalPoints}</p>
         </div>
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <p className="text-xs font-medium text-slate-500">Ataques</p>
+          <p className="text-xs font-medium text-slate-500">Kills</p>
           <p className="mt-1 text-2xl font-bold text-slate-900">{totalKills}</p>
         </div>
         <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -68,7 +68,7 @@ export default function Stats() {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-50">
             <tr className="text-left">
-              <th className="px-4 py-3 text-xs font-semibold uppercase text-slate-500">Jugador</th>
+              <th className="px-4 py-3 text-xs font-semibold uppercase text-slate-500">Player</th>
               {columns.map((c) => (
                 <th key={c.key} className="px-3 py-3 text-xs font-semibold uppercase">
                   <button
